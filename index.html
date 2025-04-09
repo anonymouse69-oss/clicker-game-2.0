@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body> 
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aesthetic Click Game</title>
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* Body */
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(45deg, #ff6ec7, #ff9a8b);  /* Gradient Background */
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* Game Container */
+        .game-container {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 30px 40px;
+            border-radius: 20px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 300px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .game-container:hover {
+            transform: scale(1.05); /* Slight zoom on hover for extra feel */
+        }
+
+        /* Header */
+        h1 {
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 600;
+        }
+
+        /* Score Text */
+        #scoreText {
+            font-size: 1.5rem;
+            color: #333;
+            margin-bottom: 30px;
+            transition: color 0.3s ease;
+        }
+
+        /* Button */
+        button {
+            padding: 12px 30px;
+            font-size: 1.25rem;
+            cursor: pointer;
+            background-color: #000000;
+            color: white;
+            border: none;
+            border-radius: 50px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Add transition for smooth effects */
+        }
+
+        /* Button Hover Effects */
+        button:hover {
+            background-color: #000000; /* Color change on hover */
+            transform: scale(1.1);  /* Slight zoom effect */
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Bigger shadow effect */
+        }
+
+        /* Button Active Effect */
+        button:active {
+            transform: scale(0.95);  /* Shrink the button slightly when clicked */
+        }
+    </style>
+</head>
+<body>
+    <div class="game-container">
+        <h1>Click Game</h1>
+        <p id="scoreText">Score: 0</p>
+        <button id="clickButton">klik mij!</button>
+    </div>
+
+    <script>
+        let score = 0;
+
+        document.getElementById('clickButton').addEventListener('click', function() {
+            score++;
+            document.getElementById('scoreText').textContent = 'Score: ' + score;
+        });
+    </script>
+</body>
+</html>
